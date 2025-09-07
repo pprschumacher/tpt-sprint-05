@@ -4,7 +4,7 @@ import plotly.express as px
 
 st.header('Dashboard de Anúncios de Venda de Carros')
 
-car_data = pd.read_csv('../newdata/vehicles_us.csv') # lendo os dados
+car_data = pd.read_csv('finaldata/vehicles_us.csv') # lendo os dados
 
 hist_button = st.button('Criar histograma de odômetro')
 
@@ -23,6 +23,11 @@ if scatter_button:
     fig = px.scatter(car_data, x="odometer", y="price")
 
     st.plotly_chart(fig, use_container_width=True)
+
+
+
+
+
     
 
 
